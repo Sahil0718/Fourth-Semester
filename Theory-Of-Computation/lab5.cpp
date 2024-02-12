@@ -61,57 +61,104 @@
 
 // Equal no of a and equal no of b
 
-
 #include <iostream>
 #include <stack>
 #include <string>
 
 using namespace std;
 
-bool accept(string input) {
+bool isBalanced(string input)
+{
     stack<char> stack;
-    stack.push('Z'); // Push initial stack symbol
 
-    int i = 0;
-    while (i < input.length()) {
-        if (input[i] == '0') {
-            stack.push('0');
-            i++;
-        } else if (input[i] == '1') {
-            if (!stack.empty() && stack.top() == '0') {
-                stack.pop(); // Pop the '0'
-                i++;
-            } else if (stack.top() == 'Z') {
-                stack.push('1'); // Push the '1'
-                i++;
-            } else {
-                return false;
+    for (char c : input)
+    {
+        if (c == '0' || c == '1')
+        {
+            if (stack.empty() || stack.top() == c)
+            {
+                stack.push(c);
             }
-        } else {
-            return false; // Invalid input symbol
+            else
+            {
+                stack.pop();
+            }
+        }
+        else
+        {
+            cout << "Invalid character '" << c << "' in the input." << endl;
+            return false;
         }
     }
 
-    // After processing all input symbols,
-    // stack should have only the initial symbol 'Z' left
-    if (stack.top() != 'Z') {
-        return false;
-    }
-    // Stack should be empty except for the initial symbol
-    return stack.size() == 1;
+    return stack.empty();
 }
 
-int main() {
+int main()
+{
     string input;
-
-    cout << "Enter a string: ";
+    cout << "Enter the input string: ";
     cin >> input;
 
-    if (accept(input)) {
-        cout << "Accepted" << endl;
-    } else {
-        cout << "Rejected" << endl;
+    if (isBalanced(input))
+    {
+        cout << "Accepted: Equal number of 1's and 0's." << endl;
+    }
+    else
+    {
+        cout << "Rejected: Unequal number of 1's and 0's." << endl;
     }
 
     return 0;
 }
+#include <iostream>
+#include <stack>
+#include <string>
+
+using namespace std;
+
+bool isBalanced(string input)
+{
+    stack<char> stack;
+
+    for (char c : input)
+    {
+        if (c == '0' || c == '1')
+        {
+            if (stack.empty() || stack.top() == c)
+            {
+                stack.push(c);
+            }
+            else
+            {
+                stack.pop();
+            }
+        }
+        else
+        {
+            cout << "Invalid character '" << c << "' in the input." << endl;
+            return false;
+        }
+    }
+
+    return stack.empty();
+}
+
+int main()
+{
+    string input;
+    cout << "Enter the input string: ";
+    cin >> input;
+
+    if (isBalanced(input))
+    {
+        cout << "Accepted: Equal number of 1's and 0's." << endl;
+    }
+    else
+    {
+        cout << "Rejected: Unequal number of 1's and 0's." << endl;
+    }
+
+    return 0;
+}
+
