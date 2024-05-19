@@ -1,0 +1,63 @@
+
+/*
+ * class Test{
+ * public static void main(String args[]){
+ * System.out.println("HELLO WORLD!");
+ * }
+ * }
+ */
+// the literals are those values which can be assigned.
+// pre-defined values that can be assigned. this is called reserved literals
+// that is boolean values can be set to true otherwise false.
+// string literals example : string s = "NCCS" ;
+
+// seperator , the most commonly used seperator is ; and it is used to terminate
+// a statement
+
+// if we want to use int as an object we use a wrapper of int i.e INTEGER
+// we cannot assign null to the preemptive
+// we can only assign null to object and wrapper class, reference variables.
+// example int n = null;
+
+// max(int , sizeofa , sizeofb) are the format in which the output gets print
+// out
+// b = b+1
+
+// java only works on true or false not 0 or 1 like other languages such as C or
+// C++.
+
+// char
+// char ko 1 byte bhaneko 8 bits bhayesi range is from 0 to 256.
+// but char in java has 2 bytes from the start.
+// 1 byte holds the data other byte holds the unicode.
+// and since it is 2 byte so the range is from 2^16.
+// 0 - 65535 range gets supported by a unicode i.e UTF 8
+// we have three reserved literals i.e true, false and null for example String s
+// = null;
+// null is where we can insert the values , empty is where data is removed.
+// garbage collector (GC) is used for destroying object and setting objects to
+// null.
+
+// DEFAULT VALUE
+// byte b; declaration
+
+// the value is assigned by the jvm automatically
+
+// string s = "null";
+//tama on declaration
+
+//3 types of variable -> instance , static , local 
+//variable declared outside the methods and defined in the class is called instance variable
+//int a; converting this into static by static int a; //same as above but with static keyword
+//local variable are those which are declared inside a method
+
+//integral literals are of 4 types such as hexadecimal , decimal , octal and binary
+//int a = 10; is the integral literals and this is the decimal format
+//int a = 0x10 ; this is the hexadecimal format , 0b10 for binary format ,0 only for octal format
+
+
+
+//all objects gets placed in heap memory 
+//there are 3 types of variable they are: static, instance and local 
+//variable gets created in a stack 
+
